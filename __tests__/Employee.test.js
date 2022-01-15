@@ -2,9 +2,9 @@ const Employee = require("../lib/Employee");
 
 //test cases below for Employee.js
 
-test("Instantiates Employee instance", () => {
+test("Instantiates employee instance", () => {
   const empl = new Employee();
-  expect(typeof(empl)).toBe("object");
+  expect(typeof (empl)).toBe("object");
 });
 
 test("Sets name via employee constructor arguments", () => {
