@@ -1,23 +1,19 @@
-name
+const Intern = require("../lib/Intern");
 
-id
+test("sets school via intern constructor", () => {
+  const testValue = "Harvard";
+  const empl = new Intern("Logan", 1, "test@test.com", testValue);
+  expect(empl.school).toBe(testValue);
+});
 
-email
+test("getRole() returns 'Intern'", () => {
+  const testValue = "Intern";
+  const empl = new Intern("Logan", 1, "test@test.com", "Harvard");
+  expect(empl.getRole()).toBe(testValue);
+});
 
-
-
-getName()
-
-getId()
-
-getEmail()
-
-getRole() // Returns 'Employee'
-
-//specific to intern
-
-school
-
-getSchool()
-
-getRole() // Overridden to return 'Intern'
+test("gets school via getSchool() method", () => {
+  const testValue = "Harvard";
+  const empl = new Intern("Logan", 1, "test@test.com", testValue);
+  expect(empl.getSchool()).toBe(testValue);
+});

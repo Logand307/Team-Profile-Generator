@@ -1,29 +1,20 @@
-// name
+const Manager = require("../lib/Manager");
+const Employee = require("../lib/Employee");
 
-// id
+test("sets office number via manager constructor", () => {
+  const testValue = 400;
+  const empl = new Manager("Foo", 1, "test@test.com", testValue);
+  expect(empl.officeNumber).toBe(testValue);
+});
 
-// email
+test("getRole() returns 'Manager'", () => {
+  const testValue = "Manager";
+  const empl = new Manager("Logan", 1, "test@test.com", 400);
+  expect(empl.getRole()).toBe(testValue);
+});
 
-
-
-// getName()
-
-// getId()
-
-// getEmail()
-
-// getRole() // Returns 'Employee'
-
-// //sep
-
-// officeNumber
-
-// getRole() // Overridden to return 'Manager'
-
-const Manager = require('../index.js');
-
-test("collects team manager's name", () => {
-    const manager = new Manager();
-  
-    expect(manager.name).toEqual(expect.any(String));
+test("Can get office number via getOffice()", () => {
+  const testValue = 400;
+  const empl = new Manager("Logan", 1, "test@test.com", testValue);
+  expect(empl.getOfficeNumber()).toBe(testValue);
 });
