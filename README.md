@@ -3,6 +3,9 @@
 Team-Profile-Generator
 # Description
 This is a command-line application that takes user input, stores it within an object and automatically generates an HTML file to display the data on individual cards. This is done with HTML, Javascript and Bootstrap (CSS). We are also using the Javascript framework Jest for unit testing.
+
+Check out this video I recorded with Screencastify: https://watch.screencastify.com/v/JhTACTp0zJt0ujMoYzyi
+
 # Table of Contents 
 * [Installation](#installation)
 * [Usage](#usage)
