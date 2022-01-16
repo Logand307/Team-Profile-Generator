@@ -8,9 +8,12 @@ const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const Manager = require("./lib/Manager");
 
+
+//empty array to store employee data in
 const Employees = [];
 
 
+//collects manager information
 const teamBuilder = () => {
     return inquirer
         .prompt([
@@ -40,6 +43,7 @@ const teamBuilder = () => {
         });
 };
 
+
 newTeamMemberPrompt = () => {
     return inquirer
         .prompt([
@@ -52,13 +56,13 @@ newTeamMemberPrompt = () => {
                 switch (userChoice.role) {
                     case "Engineer":
                         addEngineer().then(answers => {
-                            Employees.push(new Engineer (answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub));
+                            Employees.push(new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub));
                             newTeamMemberPrompt();
                         })
                         break;
                     case "Intern":
                         addIntern().then(answers => {
-                            Employees.push(new Intern (answers.internName, answers.internId, answers.internEmail, answers.internSchool));
+                            Employees.push(new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool));
                             newTeamMemberPrompt();
                         })
                         break;

@@ -18,7 +18,7 @@ module.exports = (team) => {
               </div>
           </div>
       </div>
-      <div class="container">
+      <div class="container ">
       <div class="flex-row">
               <div class="team-area col-12 d-flex justify-content-center">
                   ${team.map(teamMember => {
